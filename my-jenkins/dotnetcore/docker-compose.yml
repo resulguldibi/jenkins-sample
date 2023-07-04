@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  dotnetcore-builder:
+    image: resulguldibi/dotnetcore-builder-7.0
+    container_name: dotnetcore-builder-7.0
+    volumes:
+      - /var/jenkins/repos/${PROJECT_NAME}:/src
+      - /var/jenkins/repos/${PROJECT_NAME}/publish:/src/publish
+      - /var/jenkins/repos/${PROJECT_NAME}/build:/src/build

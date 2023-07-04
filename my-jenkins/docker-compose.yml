@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  jenkins:
+    image: resulguldibi/jenkins
+    container_name: jenkins
+    privileged: true
+    user: root
+    ports:
+      - 8081:8080
+      - 50000:50000
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/jenkins/repos:/var/jenkins/repos
+      - ./dotnetcore/docker-compose.yml:/dotnetcore/docker-compose.yml

@@ -1,0 +1,1 @@
+docker build -t resulguldibi/dotnetcore-builder-7.0 .

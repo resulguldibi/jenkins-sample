@@ -1,0 +1,43 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd /var/jenkins/repos
+git clone https://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@github.com/resulguldibi/dotnetcore-7-sample.git
+cd dotnetcore-7-sample
+cp -rp /dotnetcore/docker-compose.yml .
+export PROJECT_NAME=dotnetcore-7-sample
+rm -rf build publish
+docker compose up -d</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.45">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+      <disableDeferredWipeout>false</disableDeferredWipeout>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@604.vb_64480b_c56ca_">
+      <bindings>
+        <jenkins.plugins.git.GitUsernamePasswordBinding plugin="git@5.1.0">
+          <credentialsId>8065db89-d713-4528-9181-635bda6e109f</credentialsId>
+          <gitToolName>Default</gitToolName>
+        </jenkins.plugins.git.GitUsernamePasswordBinding>
+      </bindings>
+    </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
+  </buildWrappers>
+</project>

@@ -1,0 +1,21 @@
+Started by user [8mha:////4NnZEHFPU6Hk54Akmb4ZEHz4QCyi7+AbcIhiz8ep5zJRAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mresul guldibi
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/dotnetcore-7-pipeline
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+[dotnetcore-7-pipeline] $ /bin/sh -xe /tmp/jenkins7352151092337531034.sh
++ cd /var/jenkins/repos
++ git clone https://****@github.com/resulguldibi/dotnetcore-7-sample.git
+Cloning into 'dotnetcore-7-sample'...
++ cd dotnetcore-7-sample
++ cp -rp /dotnetcore/docker-compose.yml .
++ export PROJECT_NAME=dotnetcore-7-sample
++ rm -rf build publish
++ docker compose up -d
+ Container dotnetcore-builder-7.0  Created
+ Container dotnetcore-builder-7.0  Starting
+ Container dotnetcore-builder-7.0  Started
+Finished: SUCCESS
