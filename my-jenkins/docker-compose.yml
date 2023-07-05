@@ -12,4 +12,4 @@ services:
       - ./jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/jenkins/repos:/var/jenkins/repos
-      - ./dotnetcore/docker-compose.yml:/dotnetcore/docker-compose.yml
+      - ./dotnetcore:/dotnetcore

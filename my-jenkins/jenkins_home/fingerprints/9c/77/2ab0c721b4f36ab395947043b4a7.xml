@@ -6,7 +6,7 @@
   <usages>
     <entry>
       <string>dotnetcore-7-pipeline</string>
-      <ranges>8-11</ranges>
+      <ranges>8-56</ranges>
     </entry>
   </usages>
   <facets/>

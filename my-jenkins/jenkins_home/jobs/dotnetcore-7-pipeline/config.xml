@@ -14,12 +14,15 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /var/jenkins/repos
+rm -rf dotnetcore-7-sample
 git clone https://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@github.com/resulguldibi/dotnetcore-7-sample.git
 cd dotnetcore-7-sample
-cp -rp /dotnetcore/docker-compose.yml .
+cp -rp /dotnetcore/* .
 export PROJECT_NAME=dotnetcore-7-sample
 rm -rf build publish
-docker compose up -d</command>
+docker compose up -d
+sleep 10
+docker build --no-cache -t resulguldibi/$PROJECT_NAME --build-arg PROJECT_NAME=$PROJECT_NAME .</command>
       <configuredLocalRules/>
     </hudson.tasks.Shell>
   </builders>
