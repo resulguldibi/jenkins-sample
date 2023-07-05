@@ -13,3 +13,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/jenkins/repos:/var/jenkins/repos
       - ./dotnetcore:/dotnetcore
+      - ./java:/java

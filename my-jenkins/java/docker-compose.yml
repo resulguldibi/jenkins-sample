@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  java-builder:
+    image: resulguldibi/java-builder
+    container_name: java-builder
+    volumes:
+      - /var/jenkins/repos/${PROJECT_NAME}:/src
+      - /var/jenkins/repos/${PROJECT_NAME}/publish:/src/publish
+      - /var/jenkins/repos/${PROJECT_NAME}/build:/src/build
