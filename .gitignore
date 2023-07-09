@@ -1,4 +1,4 @@
-my-jenkins/jenkins_home/logs/
+my-jenkins/jenkins_home/logs/*
 my-jenkins/jenkins_home/jobs/*/builds/
 my-jenkins/jenkins_home/.java/
 .DS_Store
